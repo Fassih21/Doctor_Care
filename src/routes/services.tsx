@@ -3,7 +3,7 @@ import { SiteLayout } from "../components/SiteLayout";
 
 const TITLE = "Services | Doctor Care Medical & Skin Aesthetic Centre";
 const DESC =
-  "Explore medical diagnostics, physiotherapy, specialist doctors, pharmacy and skin aesthetic services at Doctor Care, Samanabad, Lahore.";
+  "Trusted Diagnostic & Medical Centre| Lab Tests | General OPD| Child Specialist| Ultrasound| Accurate Results| Physiotherapist Doctor |Skin Aesthetic treatments| ECG| DM for Consultation|";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
