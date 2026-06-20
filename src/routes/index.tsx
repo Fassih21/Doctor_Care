@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "../components/SiteLayout";
 
-const TITLE = "Services | Doctor Care Medical & Skin Aesthetic Centre";
+const TITLE = "Services | Doctor Care Medical & Skin Aesthetic Centre ";
 const DESC =
   "Explore medical diagnostics, physiotherapy, specialist doctors, lab tests, pharmacy and skin aesthetic services at Doctor Care, Samanabad, Lahore.";
 
