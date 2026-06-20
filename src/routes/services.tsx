@@ -78,6 +78,18 @@ const SERVICES: Array<{
   },
   {
     num: "05",
+    title: "Home Visit Service",
+    body:
+      "Can't make it to the clinic? Our Dr. Tahir (Senior Doctor) and staff can visit you at home for consultations, injections, drips and other selected services.",
+    benefits: [
+      "✓ Doctor & nursing visits at your doorstep",
+      "✓ Ideal for elderly or mobility-limited patients",
+      "✓ Available across Lahore on request",
+    ],
+    wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Home%20Visit%20service.",
+  },
+  {
+    num: "06",
     title: "Medical Diagnostic Imaging",
     body:
       "Accurate diagnostic imaging delivered with care and prompt reporting, helping your doctor make confident decisions.",
@@ -89,7 +101,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Diagnostic%20Imaging.",
   },
   {
-    num: "06",
+    num: "07",
     title: "All Lab Tests (CDC Laboratory)",
     body:
       "A full range of laboratory tests processed through CDC Laboratory, with accurate results and easy-to-read reporting.",
@@ -102,7 +114,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "07",
+    num: "08",
     title: "First Aid & Suturing Services",
     body:
       "Prompt wound care, dressing and suturing performed under sterile conditions by experienced medical staff.",
@@ -116,7 +128,7 @@ const SERVICES: Array<{
 
   /* ---------- Tier 2: Specialist Doctors ---------- */
   {
-    num: "08",
+    num: "09",
     title: "Orthopaedic Doctor",
     body:
       "Specialist assessment and treatment for bone, joint and muscle conditions, often paired with our in-house physiotherapy.",
@@ -129,7 +141,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "09",
+    num: "10",
     title: "Child Specialist Doctor (Paediatrician)",
     body:
       "Gentle, attentive care for infants and children from a qualified paediatrician, in a calm and welcoming setting.",
@@ -141,7 +153,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Child%20Specialist%20(Paediatrician)%20appointment.",
   },
   {
-    num: "10",
+    num: "11",
     title: "Gynaecologist Doctor",
     body:
       "Confidential, compassionate consultations with a qualified gynaecologist for women's health concerns at every life stage.",
@@ -154,7 +166,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "11",
+    num: "12",
     title: "ENT Doctor & Procedures",
     body:
       "Comprehensive ear, nose and throat consultations and procedures from an experienced ENT specialist.",
@@ -166,7 +178,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20book%20an%20ENT%20Doctor%20appointment.",
   },
   {
-    num: "12",
+    num: "13",
     title: "Physiotherapy & Rehabilitation",
     body:
       "Targeted recovery for neck, shoulder, back, ankle and sports-related pain — guided by experienced physiotherapists like Dr. Mahnoor Butt, whose patients consistently report measurable improvement.",
@@ -181,7 +193,7 @@ const SERVICES: Array<{
 
   /* ---------- Tier 3: Skin Aesthetic Treatments ---------- */
   {
-    num: "13",
+    num: "14",
     title: "Skin Aesthetic Treatments",
     body:
       "Honest consultations and gentle, results-focused skin care — from advanced facials to dermatological procedures performed in a sterile environment.",
@@ -193,7 +205,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Skin%20Aesthetic%20Treatments.",
   },
   {
-    num: "14",
+    num: "15",
     title: "Hydra Facial",
     body:
       "A deeply hydrating, multi-step facial that cleanses, exfoliates and infuses the skin for an immediate, healthy glow.",
@@ -206,7 +218,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "15",
+    num: "16",
     title: "Carbon Laser Facial",
     body:
       "A advanced carbon laser treatment that deep-cleanses pores, reduces oiliness and leaves skin instantly smoother and brighter.",
@@ -218,7 +230,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Carbon%20Laser%20Facial.",
   },
   {
-    num: "16",
+    num: "17",
     title: "Chemical Peels",
     body:
       "Professional-grade chemical peels to treat acne, dullness, pigmentation and fine lines, tailored to your skin's needs.",
@@ -231,7 +243,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "17",
+    num: "18",
     title: "Microneedling (Dr Pen)",
     body:
       "Advanced Dr Pen microneedling to improve skin texture, scarring and overall radiance by stimulating natural collagen production.",
@@ -243,7 +255,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Microneedling%20(Dr%20Pen).",
   },
   {
-    num: "18",
+    num: "19",
     title: "PRP – Face & Scalp",
     body:
       "Platelet-Rich Plasma therapy using your own blood to rejuvenate skin or stimulate hair regrowth on the scalp.",
@@ -256,7 +268,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "19",
+    num: "20",
     title: "Mesotherapy for Pigmentation & Melasma",
     body:
       "Targeted mesotherapy sessions that deliver active ingredients directly into the skin to fade pigmentation and melasma.",
@@ -268,7 +280,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Mesotherapy.",
   },
   {
-    num: "20",
+    num: "21",
     title: "Pigmentation & Melasma Treatments",
     body:
       "Dedicated treatment plans to reduce stubborn pigmentation and melasma, combining clinical procedures with at-home guidance.",
@@ -281,7 +293,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "21",
+    num: "22",
     title: "Subcision for Acne Scars",
     body:
       "A specialised procedure that releases tethered acne scars beneath the skin, improving texture and smoothness over time.",
@@ -293,7 +305,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Subcision%20for%20Acne%20Scars.",
   },
   {
-    num: "22",
+    num: "23",
     title: "Laser Hair Removal",
     body:
       "Long-lasting, comfortable laser hair reduction for face and body, performed with modern equipment by trained staff.",
@@ -306,7 +318,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "23",
+    num: "24",
     title: "Whitening Drips",
     body:
       "Glutathione-based whitening drip therapy to even tone and brighten skin, administered safely under medical supervision.",
@@ -318,7 +330,7 @@ const SERVICES: Array<{
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Whitening%20Drips.",
   },
   {
-    num: "24",
+    num: "25",
     title: "Slimming Drips",
     body:
       "IV-based slimming and metabolism-support drips designed to complement your weight management goals.",
@@ -331,7 +343,7 @@ const SERVICES: Array<{
     reverse: true,
   },
   {
-    num: "25",
+    num: "26",
     title: "Warts & Tattoo Removal",
     body:
       "Safe and effective removal of warts and unwanted tattoos using appropriate clinical techniques for your skin type.",
@@ -345,7 +357,7 @@ const SERVICES: Array<{
 
   /* ---------- Tier 4: Support Services ---------- */
   {
-    num: "26",
+    num: "27",
     title: "Injection & IV Drip Services",
     body:
       "Safe, hygienic administration of prescribed injections and intravenous drips by trained staff in a comfortable setting.",
@@ -356,18 +368,6 @@ const SERVICES: Array<{
     ],
     wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Injection%20%26%20Drip%20services.",
     reverse: true,
-  },
-  {
-    num: "27",
-    title: "Home Visit Service",
-    body:
-      "Can't make it to the clinic? Our Dr. Tahir (Senior Doctor) and staff can visit you at home for consultations, injections, drips and other selected services.",
-    benefits: [
-      "✓ Doctor & nursing visits at your doorstep",
-      "✓ Ideal for elderly or mobility-limited patients",
-      "✓ Available across Lahore on request",
-    ],
-    wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Home%20Visit%20service.",
   },
   {
     num: "28",
