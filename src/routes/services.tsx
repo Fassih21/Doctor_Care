@@ -366,7 +366,7 @@ const SERVICES: Array<{
     num: "28",
     title: "Home Visit Service",
     body:
-      "Can't make it to the clinic? Our doctors and staff can visit you at home for consultations, injections, drips and other selected services.",
+      "Can't make it to the clinic? Our Dr.Tahir (Senior Doctor) and staff can visit you at home for consultations, injections, drips and other selected services.",
     benefits: [
       "✓ Doctor & nursing visits at your doorstep",
       "✓ Ideal for elderly or mobility-limited patients",
