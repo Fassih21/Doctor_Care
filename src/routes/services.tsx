@@ -384,8 +384,7 @@ function ServicesPage() {
           <span className="eyebrow">Our Services</span>
           <h1>Complete medical, physiotherapy &amp; skin aesthetic care.</h1>
           <p className="lead">
-            Every service is delivered by qualified professionals in a clean, calm
-            environment — with treatment plans tailored to you.
+            Trusted Diagnostic & Medical Centre| Lab Tests | General OPD| Child Specialist| Ultrasound| Accurate Results| Physiotherapist Doctor |Skin Aesthetic treatments| ECG| DM for Consultation|
           </p>
         </div>
       </section>
