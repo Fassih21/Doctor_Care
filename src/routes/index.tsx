@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "../components/SiteLayout";
 
-const TITLE = "Doctor Care Medical & Skin Aesthetic Centre | Samanabad, Lahore";
+const TITLE = "Services | Doctor Care Medical & Skin Aesthetic Centre";
 const DESC =
-  "Trusted medical diagnostics, physiotherapy and skin aesthetic treatments in Samanabad, Lahore. 5.0★ rated by 73 patients on Google.";
+  "Explore medical diagnostics, physiotherapy, specialist doctors, lab tests, pharmacy and skin aesthetic services at Doctor Care, Samanabad, Lahore.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -14,219 +14,253 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: DESC },
     ],
   }),
-  component: Index,
+  component: ServicesPage,
 });
 
-function Index() {
+/* ---------- Flagship services (full editorial detail) ---------- */
+
+const SERVICES: Array<{
+  num: string;
+  title: string;
+  body: string;
+  benefits: string[];
+  wa: string;
+  reverse?: boolean;
+}> = [
+  {
+    num: "01",
+    title: "Medical Diagnostic Imaging",
+    body:
+      "Accurate diagnostic imaging delivered with care and prompt reporting, helping your doctor make confident decisions.",
+    benefits: [
+      "✓ Modern imaging in a clean environment",
+      "✓ Easy-to-understand reports",
+      "✓ Friendly, professional technicians",
+    ],
+    wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Diagnostic%20Imaging.",
+  },
+  {
+    num: "02",
+    title: "Skin Aesthetic Treatments",
+    body:
+      "Honest consultations and gentle, results-focused skin care — from advanced facials to dermatological procedures performed in a sterile environment.",
+    benefits: [
+      "✓ Personalised skin assessment",
+      "✓ Modern aesthetic procedures",
+      "✓ Visible, long-lasting results",
+    ],
+    wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Skin%20Aesthetic%20Treatments.",
+    reverse: true,
+  },
+  {
+    num: "03",
+    title: "Physiotherapy & Rehabilitation",
+    body:
+      "Targeted recovery for neck, shoulder, back, ankle and sports-related pain — guided by experienced physiotherapists like Dr. Mahnoor Butt, whose patients consistently report measurable improvement.",
+    benefits: [
+      "✓ Custom rehab plans",
+      "✓ Hands-on, evidence-based therapy",
+      "✓ Real pain relief, session by session",
+    ],
+    wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Physiotherapy%20session.",
+  },
+  {
+    num: "04",
+    title: "General Medical Consultations (OPD)",
+    body:
+      "Routine check-ups, follow-ups and ongoing health support — unhurried OPD appointments that listen first.",
+    benefits: [
+      "✓ Attentive doctors",
+      "✓ Convenient late hours",
+      "✓ Continuity of care",
+    ],
+    wa: "https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20a%20General%20Consultation.",
+    reverse: true,
+  },
+];
+
+/* ---------- Compact services, grouped by category ---------- */
+
+type CompactService = { icon: string; title: string; body: string; wa: string };
+type Category = { name: string; blurb: string; items: CompactService[] };
+
+function waLink(label: string) {
+  return `https://wa.me/923327557014?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20${encodeURIComponent(
+    label
+  )}.`;
+}
+
+const CATEGORIES: Category[] = [
+  {
+    name: "Skin Aesthetic Procedures",
+    blurb: "Advanced, results-led treatments for skin, scars and pigmentation.",
+    items: [
+      { icon: "💧", title: "Whitening Drips", body: "IV brightening drips for an even, radiant complexion.", wa: waLink("Whitening Drips") },
+      { icon: "🔥", title: "Carbon Laser", body: "Carbon peel laser facial for pores, oil control and glow.", wa: waLink("Carbon Laser") },
+      { icon: "🩸", title: "PRP Face / Scalp", body: "Platelet-rich plasma therapy for skin rejuvenation and hair regrowth.", wa: waLink("PRP Face/Scalp") },
+      { icon: "🎯", title: "Subcision for Acne Scars", body: "Targeted procedure to release and smooth depressed acne scars.", wa: waLink("Subcision for Acne Scars") },
+      { icon: "💉", title: "Microneedling (Dr Pen)", body: "Collagen-induction therapy for texture, scars and fine lines.", wa: waLink("Microneedling (Dr Pen)") },
+      { icon: "🧪", title: "Mesotherapy", body: "Targeted micro-injections for pigmentation and melasma.", wa: waLink("Mesotherapy for Pigmentation & Melasma") },
+      { icon: "🌿", title: "Chemical Peels", body: "Customised peels to refresh tone, texture and clarity.", wa: waLink("Chemical Peels") },
+      { icon: "🚿", title: "Hydra Facial", body: "Deep cleansing, exfoliating and hydrating facial treatment.", wa: waLink("Hydra Facial") },
+      { icon: "🌗", title: "Pigmentation & Melasma Treatment", body: "Dedicated treatment plans for uneven tone and dark patches.", wa: waLink("Pigmentation & Melasma Treatment") },
+      { icon: "⚖️", title: "Slimming Drips", body: "IV drip therapy supporting body contouring goals.", wa: waLink("Slimming Drips") },
+      { icon: "✨", title: "Laser Hair Removal", body: "Long-lasting hair reduction for face and body.", wa: waLink("Laser Hair Removal") },
+      { icon: "🩹", title: "Warts & Tattoo Removal", body: "Safe, precise removal of warts and unwanted tattoos.", wa: waLink("Warts & Tattoo Removal") },
+    ],
+  },
+  {
+    name: "Specialist Doctors",
+    blurb: "Consultant-led care across key specialities, under one roof.",
+    items: [
+      { icon: "👂", title: "ENT Doctor & Procedures", body: "Ear, nose and throat consultations and minor procedures.", wa: waLink("ENT Doctor & Procedures") },
+      { icon: "🤰", title: "Gynaecologist", body: "Confidential women's health consultations and care.", wa: waLink("Gynaecologist") },
+      { icon: "🦴", title: "Orthopaedic Doctor", body: "Bone, joint and muscle assessment and treatment.", wa: waLink("Orthopaedic Doctor") },
+      { icon: "🧒", title: "Child Specialist (Paeds)", body: "Dedicated paediatric consultations for infants and children.", wa: waLink("Child Specialist (Paeds)") },
+    ],
+  },
+  {
+    name: "Diagnostics & Lab",
+    blurb: "On-site testing and imaging, with fast, accurate reporting.",
+    items: [
+      { icon: "📡", title: "Ultrasound", body: "On-site ultrasound imaging with prompt reporting.", wa: waLink("Ultrasound") },
+      { icon: "💓", title: "ECG", body: "Quick, accurate cardiac screening on-site.", wa: waLink("ECG") },
+      { icon: "🧫", title: "All Lab Tests (CDC Laboratory)", body: "Full diagnostic lab testing in partnership with CDC Laboratory.", wa: waLink("Lab Tests - CDC Laboratory") },
+    ],
+  },
+  {
+    name: "Pharmacy & Support Care",
+    blurb: "Everything around your treatment, handled in-house.",
+    items: [
+      { icon: "💊", title: "Pharmacy", body: "100% original medicines, dispensed on-site.", wa: waLink("Pharmacy") },
+      { icon: "💉", title: "Injection & Drips", body: "Prescribed injections and IV drip administration.", wa: waLink("Injection & Drips") },
+    ],
+  },
+];
+
+/* ---------- Emergency banner ---------- */
+
+const EMERGENCY = {
+  title: "Emergency & Urgent Care",
+  body:
+    "First aid, sutures and emergency support available — walk in or call ahead and our team will be ready.",
+  wa: "https://wa.me/923327557014?text=Hello%2C%20this%20is%20an%20emergency%2C%20I%20need%20urgent%20help.",
+  tel: "tel:+923327557014",
+};
+
+function ServicesPage() {
   return (
     <SiteLayout>
-      <section className="hero">
-        <div className="hero-bg" aria-hidden="true"></div>
-        <div className="container hero-inner">
-          <div className="hero-copy">
-            <span className="eyebrow">★ 5.0 · 73 verified reviews on Google</span>
-            <h1>
-              Compassionate Care for <span className="grad">Your Health &amp; Skin</span>.
-            </h1>
-            <p className="lead">
-              A trusted medical, physiotherapy and skin aesthetic centre in the heart
-              of Samanabad, Lahore — combining experienced doctors with a calm, modern
-              clinic environment.
-            </p>
-            <div className="hero-cta">
-              <a
-                className="btn btn-primary"
-                href="https://wa.me/923027557004?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20more%20information."
-                target="_blank"
-                rel="noopener"
-              >
-                Book on WhatsApp
-              </a>
-              <Link className="btn btn-ghost" to="/services">
-                Explore Services →
-              </Link>
-            </div>
-            <ul className="hero-points">
-              <li>✓ Friendly &amp; cooperative staff</li>
-              <li>✓ Clean, welcoming environment</li>
-              <li>✓ Experienced physiotherapists &amp; dermatology care</li>
-            </ul>
+      <section className="page-hero">
+        <div className="container">
+          <span className="eyebrow">Our Services</span>
+          <h1>Complete medical, physiotherapy &amp; skin aesthetic care.</h1>
+          <p className="lead">
+            Every service is delivered by qualified professionals in a clean, calm
+            environment — with treatment plans tailored to you.
+          </p>
+        </div>
+      </section>
+
+      {/* Emergency banner — deliberately distinct, not a card in a grid */}
+      <section className="section emergency-band">
+        <div className="container emergency-inner">
+          <div className="emergency-copy">
+            <span className="emergency-tag">🚨 Emergency</span>
+            <h2>{EMERGENCY.title}</h2>
+            <p>{EMERGENCY.body}</p>
           </div>
-          <aside className="hero-card">
-            <div className="hero-card-head">
-              <h3>Quick Appointment</h3>
-              <span className="badge-open">● Open Now</span>
-            </div>
-            <ul className="quick-info">
-              <li>
-                <strong>Today</strong>
-                <span>Closes 1:00 AM</span>
-              </li>
-              <li>
-                <strong>Call</strong>
-                <span>
-                  <a href="tel:+923027557004">+92 302 7557004</a>
-                </span>
-              </li>
-              <li>
-                <strong>Location</strong>
-                <span>Samanabad, Lahore</span>
-              </li>
-              <li>
-                <strong>Rating</strong>
-                <span>5.0 ★★★★★ (73)</span>
-              </li>
-            </ul>
-            <a
-              className="btn btn-primary btn-block"
-              href="https://wa.me/923027557004?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment."
-              target="_blank"
-              rel="noopener"
-            >
-              Message on WhatsApp
+          <div className="emergency-actions">
+            <a className="btn btn-light" href={EMERGENCY.wa} target="_blank" rel="noopener">
+              WhatsApp Now
             </a>
-          </aside>
-        </div>
-      </section>
-
-      <section className="section about">
-        <div className="container about-grid">
-          <div className="about-visual">
-            <div className="stat-card s1">
-              <b>5.0★</b>
-              <span>Google Rating</span>
-            </div>
-            <div className="stat-card s2">
-              <b>73+</b>
-              <span>Happy Patients</span>
-            </div>
-            <div className="stat-card s3">
-              <b>10+</b>
-              <span>Specialised Services</span>
-            </div>
-          </div>
-          <div className="about-copy">
-            <span className="kicker">About the Centre</span>
-            <h2>Modern medicine, gentle hands, real results.</h2>
-            <p>
-              Doctor Care Medical &amp; Skin Aesthetic Centre brings together qualified
-              physicians, physiotherapists and skin specialists under one calm,
-              hygienic roof. From diagnostic imaging to advanced skin care and
-              rehabilitation, every patient receives unhurried attention and a
-              treatment plan built around them.
-            </p>
-            <p>
-              Our patients consistently describe us as{" "}
-              <em>“professional, attentive and welcoming”</em> — and that is exactly
-              the standard we work to every single day.
-            </p>
-            <Link className="link-arrow" to="/services">
-              See what we treat →
-            </Link>
+            <a className="btn btn-ghost-light" href={EMERGENCY.tel}>
+              Call +92 332 7557014
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="section why">
+      <section className="section services-list">
         <div className="container">
-          <div className="section-head center">
-            <span className="kicker">Why Patients Choose Us</span>
-            <h2>Care you can feel from the first visit.</h2>
-          </div>
-          <div className="why-grid">
-            {[
-              ["🩺", "Experienced Doctors", "Qualified physicians and physiotherapists led by professionals like Dr. Mahnoor Butt, trusted for measurable improvement."],
-              ["✨", "Advanced Skin Care", "Modern aesthetic treatments performed in a sterile, comfortable environment with honest consultations."],
-              ["🧘", "Physiotherapy", "Targeted recovery plans for neck, shoulder, ankle and joint pain — patients report real relief, often within sessions."],
-              ["🤝", "Cooperative Staff", "Friendly, attentive team that listens first and treats with respect — every visit."],
-              ["🧼", "Clean Environment", "Spotless, welcoming clinic — one of the most-mentioned reasons patients return."],
-              ["📍", "Central Lahore", "Easy to reach in Samanabad Town with friendly opening hours late into the night."],
-            ].map(([icon, title, body]) => (
-              <article className="feature" key={title}>
-                <div className="feature-icon">{icon}</div>
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </article>
-            ))}
-          </div>
+          {SERVICES.map((s) => (
+            <article key={s.num} className={`svc${s.reverse ? " reverse" : ""}`}>
+              <div className="svc-head">
+                <span className="svc-num">{s.num}</span>
+                <h2>{s.title}</h2>
+              </div>
+              <div>
+                <p>{s.body}</p>
+                <ul className="benefits">
+                  {s.benefits.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+                <a
+                  className="btn btn-primary"
+                  href={s.wa}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Inquire on WhatsApp
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section className="section services-preview">
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="kicker">Featured Services</span>
-              <h2>Treatments designed around you.</h2>
+      {/* Categorised compact services */}
+      {CATEGORIES.map((cat) => (
+        <section className="section why" key={cat.name}>
+          <div className="container">
+            <div className="section-head center">
+              <span className="kicker">{cat.name}</span>
+              <h2>{cat.blurb}</h2>
             </div>
-            <Link className="btn btn-outline" to="/services">
-              View all services
-            </Link>
+            <div className="why-grid">
+              {cat.items.map((item) => (
+                <article className="feature" key={item.title}>
+                  <div className="feature-icon">{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                  <a
+                    className="link-arrow"
+                    href={item.wa}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Inquire on WhatsApp →
+                  </a>
+                </article>
+              ))}
+            </div>
           </div>
-          <div className="services-grid">
-            {[
-              ["01", "Medical Diagnostic Imaging", "Accurate diagnostics with prompt, easy-to-understand reporting."],
-              ["02", "Skin Aesthetic Treatments", "Facials, skin rejuvenation and advanced dermatology procedures."],
-              ["03", "Physiotherapy & Rehab", "Neck, shoulder, ankle and sports injury rehabilitation."],
-              ["04", "General Medical Care", "Routine consultations and ongoing health support."],
-            ].map(([num, title, body]) => (
-              <Link key={num} to="/services" className="service-card">
-                <span className="service-num">{num}</span>
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section trust">
-        <div className="container">
-          <div className="section-head center">
-            <span className="kicker">In Patients’ Words</span>
-            <h2>Rated 5.0 ★ on Google by 73 patients.</h2>
-          </div>
-          <div className="reviews">
-            {[
-              ["Dodo Chanel", "Excellent experience. The whole staff was friendly, cooperative and professional. I received physiotherapy treatment for my neck and shoulder pain from Dr. Mahnoor Butt — really happy with the results."],
-              ["Zaryab Mustafa", "Wonderful experience at Doctor Care. The staff is incredibly cooperative, professional and attentive. The atmosphere is clean and welcoming. Highly recommended!"],
-              ["Aneesa Javaid", "Very good experience with Physiotherapist Dr. Mahnoor Butt for my ankle sprain. Professional, kind and helpful. My pain improved a lot after the sessions. Highly recommended."],
-            ].map(([name, quote]) => (
-              <article className="review" key={name}>
-                <div className="stars">★★★★★</div>
-                <p>“{quote}”</p>
-                <footer>
-                  <strong>{name}</strong>
-                  <span>Google Review</span>
-                </footer>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       <section className="section cta-band">
         <div className="container cta-inner">
           <div>
-            <span className="kicker light">Ready When You Are</span>
-            <h2>Book your visit in under a minute.</h2>
+            <span className="kicker light">Not Sure Which Service?</span>
+            <h2>Tell us your concern — we’ll guide you.</h2>
             <p>
-              Chat with us directly on WhatsApp and our team will help you schedule
-              the right appointment.
+              Our team will help you book the right appointment with the right
+              specialist.
             </p>
           </div>
           <div className="cta-actions">
             <a
               className="btn btn-light"
-              href="https://wa.me/923027557004?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20more%20information."
+              href="https://wa.me/923327557014?text=Hello%2C%20I%20need%20guidance%20choosing%20a%20service."
               target="_blank"
               rel="noopener"
             >
               WhatsApp Us
             </a>
-            <a className="btn btn-ghost-light" href="tel:+923027557004">
-              Call +92 302 7557004
-            </a>
+            <Link className="btn btn-ghost-light" to="/contact">
+              Visit Us →
+            </Link>
           </div>
         </div>
       </section>

@@ -3,7 +3,7 @@ import { SiteLayout } from "../components/SiteLayout";
 
 const TITLE = "Location & Contact | Doctor Care Medical & Skin Aesthetic Centre";
 const DESC =
-  "Visit Doctor Care Medical & Skin Aesthetic Centre at 815-N Poonch Rd, Samanabad, Lahore. Call +92 302 7557004 or message us on WhatsApp.";
+  "Visit Doctor Care Medical & Skin Aesthetic Centre at 815-N Poonch Rd, Samanabad, Lahore. Call +92 332 7557014 or message us on WhatsApp.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -58,11 +58,11 @@ function ContactPage() {
             <div className="info-card">
               <h3>📞 Phone &amp; WhatsApp</h3>
               <p>
-                <a href="tel:+923027557004">+92 302 7557004</a>
+                <a href="tel:+923327557014">+92 332 7557014</a>
               </p>
               <a
                 className="btn btn-primary btn-sm"
-                href="https://wa.me/923027557004?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20more%20information."
+                href="https://wa.me/923327557014?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20more%20information."
                 target="_blank"
                 rel="noopener"
               >
@@ -125,13 +125,13 @@ function ContactPage() {
           <div className="cta-actions">
             <a
               className="btn btn-light"
-              href="https://wa.me/923027557004?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20more%20information."
+              href="https://wa.me/923327557014?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20more%20information."
               target="_blank"
               rel="noopener"
             >
               WhatsApp Us
             </a>
-            <a className="btn btn-ghost-light" href="tel:+923027557004">
+            <a className="btn btn-ghost-light" href="tel:+923327557014">
               Call Now
             </a>
           </div>

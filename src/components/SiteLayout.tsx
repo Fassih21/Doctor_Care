@@ -2,7 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const WA_DEFAULT =
-  "https://wa.me/923027557004?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20more%20information.";
+  "https://wa.me/923327557014?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20more%20information.";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const { location } = useRouterState();
@@ -61,7 +61,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <span>📍 815-N Poonch Rd, Samanabad, Lahore</span>
           <span>🕐 Open Today · Closes 1:00 AM</span>
           <span>
-            📞 <a href="tel:+923027557004">+92 302 7557004</a>
+            📞 <a href="tel:+923327557014">+92 332 7557014</a>
           </span>
         </div>
       </div>
@@ -130,14 +130,30 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div>
             <h4>Contact</h4>
             <p>
-              <a href="tel:+923027557004">+92 302 7557004</a>
+              <a href="tel:+923327557014">+92 332 7557014</a>
               <br />
-              <a href="https://wa.me/923027557004" target="_blank" rel="noopener">
+              <a href="https://wa.me/923327557014" target="_blank" rel="noopener">
                 WhatsApp Chat
               </a>
               <br />
               <a href="https://facebook.com" target="_blank" rel="noopener">
                 Facebook
+              </a>
+              <br />
+              <a
+                href="https://www.instagram.com/doctor_care_medical_centre?igsh=MTJuN2p6ejBvMHBlaw%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener"
+              >
+                Instagram
+              </a>
+              <br />
+              <a
+                href="https://www.tiktok.com/@doctoraestheticcentre?_r=1&_t=ZS-97N3RAAanma"
+                target="_blank"
+                rel="noopener"
+              >
+                TikTok
               </a>
             </p>
           </div>
