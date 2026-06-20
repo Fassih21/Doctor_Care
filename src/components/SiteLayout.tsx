@@ -73,7 +73,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               D<i></i>C
             </span>
             <span className="logo-text">
-              Doctor Care<small>Medical &amp; Skin Aesthetic Centre</small>
+              Doctor Care
+              <small>Medical &amp; Skin Aesthetic Centre (We Care We Serve)</small>
             </span>
           </Link>
           <nav className={`nav${navOpen ? " open" : ""}`}>
@@ -111,7 +112,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 D<i></i>C
               </span>
               <span className="logo-text">
-                Doctor Care<small>Medical &amp; Skin Aesthetic Centre</small>
+                Doctor Care
+                <small>Medical &amp; Skin Aesthetic Centre (We Care We Serve)</small>
               </span>
             </Link>
             <p className="muted">
@@ -169,7 +171,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="container footer-bottom">
           <span>
             © {new Date().getFullYear()} Doctor Care Medical &amp; Skin
-            Aesthetic Centre. All rights reserved.
+            Aesthetic Centre (We Care We Serve). All rights reserved.
           </span>
           <span>Samanabad · Lahore · Pakistan</span>
         </div>
