@@ -80,6 +80,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <nav className={`nav${navOpen ? " open" : ""}`}>
             {navLink("/", "Home")}
             {navLink("/services", "Services")}
+            {navLink("/reviews", "Reviews")}
             {navLink("/contact", "Location")}
             <a
               href={WA_DEFAULT}
