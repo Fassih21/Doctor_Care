@@ -286,7 +286,7 @@ p{margin:0 0 1em}
   .why-grid,.services-grid,.footer-grid{grid-template-columns:1fr}
   .topbar-inner{justify-content:center;text-align:center}
   .topbar-inner span:nth-child(2){display:none}
-  .logo-text small{display:none}
+  .logo-text small{font-size:.6rem}
   .section{padding:3.5rem 0}
   .cta-inner{flex-direction:column;align-items:flex-start}
   .wa-float span{display:none}
