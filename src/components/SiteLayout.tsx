@@ -69,9 +69,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className={`site-header${scrolled ? " scrolled" : ""}`}>
         <div className="container header-inner">
           <Link to="/" className="logo">
-            <span className="logo-mark">
-              D<i></i>C
-            </span>
+            <img src="/logo.jpeg" alt="Doctor Care Logo" className="logo-img" />
             <span className="logo-text">
               Doctor Care
               <small>Medical &amp; Skin Aesthetic Centre (We Care We Serve)</small>
@@ -109,9 +107,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="container footer-grid">
           <div>
             <Link to="/" className="logo logo-light">
-              <span className="logo-mark">
-                D<i></i>C
-              </span>
+              <img src="/logo.jpeg" alt="Doctor Care Logo" className="logo-img" />
               <span className="logo-text">
                 Doctor Care
                 <small>Medical &amp; Skin Aesthetic Centre (We Care We Serve)</small>

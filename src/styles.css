@@ -1,8 +1,8 @@
-@import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@custom-variant dark (&:is(.dark *));
 
 /* ============================================================
    Doctor Care Medical & Skin Aesthetic Centre — custom styles
@@ -86,15 +86,11 @@ p{margin:0 0 1em}
 .site-header.scrolled{box-shadow:var(--shadow-sm);border-bottom-color:var(--line)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 22px;position:relative}
 .logo{display:flex;align-items:center;gap:.7rem;color:var(--ink)}
-.logo-mark{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:44px;height:44px;border-radius:14px;
-  background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
-  color:#fff;font-family:var(--font-serif);font-weight:700;font-size:1.1rem;
-  position:relative;box-shadow:var(--shadow-sm);
+.logo-img{
+  width:48px;height:48px;border-radius:10px;
+  object-fit:contain;background:#0d1b2a;padding:3px;
+  box-shadow:var(--shadow-sm);flex-shrink:0;
 }
-.logo-mark i{position:absolute;width:10px;height:2px;background:#fff;border-radius:2px}
-.logo-mark i::before{content:"";position:absolute;width:2px;height:10px;background:#fff;left:4px;top:-4px;border-radius:2px}
 .logo-text{display:flex;flex-direction:column;font-family:var(--font-serif);font-weight:600;font-size:1.05rem;line-height:1.1}
 .logo-text small{font-family:var(--font-sans);font-weight:400;font-size:.7rem;color:var(--muted);letter-spacing:.02em}
 .logo-light{color:#fff}
